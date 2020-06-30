@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy B'day</title>
+    <meta name="author" content="Tanuj Bajaj">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <style>
+    html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+.title{
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.description{
+    font-size: 21px;
+    font-weight: 400;
+    color: #888;
+}
+.bold{
+    font-weight: 700;
+}
+.slider{
+    padding: 50px 0;
+}
+.slider-origin{
+    background-color: #bd2cbd;
+    border-radius: 50%;
+    /*margin-top: 20%;*/
+    display: inline-block;
+    position: relative;
+}
+.slider-inner{
+    display: inline-block;
+}
+.slider-item{
+    width: 144px;
+    height: 200px;
+    background-color: rgba(128,0,128,0.4);
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    position: absolute;
+    bottom: 200%;
+    left: 10%;
+    margin-left: -37px;
+		cursor: pointer;
+    
+    transform-origin: center 175%;
+    -webkit-transform-origin: center 175%;
+    -ms-transform-origin: center 175%;
+    -moz-transform-origin: center 175%;
+    
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+
+    text-align: left;
+    color: #fff;
+    padding: 7px;
+    box-sizing: border-box;
+
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.slider-item.active{
+    background-color: purple;
+    cursor: default;
+    width: 494px;
+    height: 500px;
+    bottom: 90%;
+    margin-left: -237px;
+}
+.slider-item:not(.active):hover{
+	background-color: #540554;
+}
+.slider-item.active .slide-title {
+    display: block;
+    font-size: 30px;
+}
+.slider-item .dot{
+    opacity: 0;
+}
+.slider-item.active .dot {
+   opacity: 1; 
+   transition: all 0.3s ease; 
+}
+.slider-item.active .slide-subtitle {
+   opacity: 1; 
+   font-size: 50px;
+   transition: all 0.3s ease;  
+}
+.slider-item.active .image-wrapper {
+    opacity: 1;     
+   transition: all 0.3s ease; 
+}
+.slider-item .image-wrapper {
+    opacity: 0;     
+   transition: all 0.3s ease; 
+}
+.slider-item .slide-subtitle {
+    opacity: 0;
+}
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-position: left -180px center;
+}
+.slider-item .image-wrapper > div img {
+    width: 100%;
+}
+.slider-item .image-wrapper > div {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    min-height: 1px;
+}
+.slider-item .image-wrapper .image-1 {
+    transform: rotate(-15deg);
+}
+.slider-item .image-wrapper .image-3 {
+    transform: rotate(15deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-video" style="background-image: url(Images/image.gif);">
+    </div>
+<div class="slider">
+    <div class="slider-inner">
+        <div class="slider-origin">
+            <div class="slider-item"><span class="slide-title">1<span class="dot">.</span> <span class="slide-subtitle">Just Arrived</span></span>
+            <div class="image-wrapper">
+                <div class="image-1">
+                    <img src="Images/baby.jpg">
+                </div>
+                <div class="image-2"></div>
+                <div class="image-3">
+                    <img src="Images/baby-girl.jpg">
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">2<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+            
+            </div>
+            <div class="slider-item"><span class="slide-title">3<span class="dot">.</span> <span class="slide-subtitle">I've turned 2!</span></span>
+                <div class="image-wrapper">
+                <div class="image-1">
+                    
+                </div>
+                <div class="image-2"><img src="Images/image2.jpg"></div>
+                <div class="image-3">
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">4<span class="dot">.</span> <span class="slide-subtitle">School Time!</span></span>
+            <div class="image-wrapper">
+                <div class="image-1">
+                    <img src="Images/image1.jpg">
+                </div>
+                <div class="image-2"></div>
+                <div class="image-3">
+                    <img src="Images/image4.jpg">
+                </div>
+            </div></div>
+            <div class="slider-item"><span class="slide-title">5<span class="dot">.</span> <span class="slide-subtitle">I'm Growing Faster.</span></span>
+            <div class="image-wrapper">
+                <div class="image-1">
+                    <img src="Images/image3.jpg">
+                </div>
+                <div class="image-2"></div>
+                <div class="image-3">
+                    <img src="Images/image5.jpg">
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">6<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                
+            </div>
+            <div class="slider-item"><span class="slide-title">7
+                <span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                
+            </div>
+            <div class="slider-item"><span class="slide-title">8<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">9<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">10<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">11<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                <div class="image-wrapper">
+                <div class="image-1">
+                    <img src="Images/image6.jpg">
+                </div>
+                <div class="image-2"></div>
+                <div class="image-3">
+                    <img src="Images/image9.jpg">
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">12<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                <div class="image-wrapper">
+                <div class="image-1"></div>
+                <div class="image-2"><img src="Images/image11.jpg"></div>
+                <div class="image-3"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">13<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">14<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">15<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">16<span class="dot">.</span> <span class="slide-subtitle">Oh Damm! Board Exam...</span></span></div>
+            <div class="slider-item"><span class="slide-title">17<span class="dot">.</span> <span class="slide-subtitle">What Should I Choose!</span></span></div>
+            <div class="slider-item"><span class="slide-title">18<span class="dot">.</span> <span class="slide-subtitle">Hurrraaaaayyy! School's over.</span></span></div>
+            <div class="slider-item"><span class="slide-title">19<span class="dot">.</span> <span class="slide-subtitle">College Time!</span></span></div>
+            <div class="slider-item"><span class="slide-title">20<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">21<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">22<span class="dot">.</span> <span class="slide-subtitle">Big City!</span></span></div>
+            <div class="slider-item"><span class="slide-title">23<span class="dot">.</span> <span class="slide-subtitle">My First Job!</span></span></div>
+            <div class="slider-item"><span class="slide-title">24<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
+            <div class="slider-item"><span class="slide-title">25<span class="dot">.</span> <span class="slide-subtitle">The Lockdown</span></span></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function(){
+
+    // helpful variables
+    var slider = $('.slider');
+    var sliderInner = slider.find('.slider-inner');
+    var sliderOrigin = slider.find('.slider-origin');
+    var sliderItems = slider.find('.slider-item');
+    var itemsLength = sliderItems.length;
+    var calcDeg = 270 / itemsLength;
+    var clickDown = false;
+    var mouseMove = false;
+    var moveFrom = null;
+    var moveTo = null;
+    var extraDeg = 0;
+    var currentItem = sliderItems.eq(0);
+
+    // slider origin width & height = half of item height
+    sliderOrigin.width(sliderItems.outerHeight() / 2);
+    sliderOrigin.height(sliderItems.outerHeight() / 2);
+    
+    // slider inner width & height = item height * 3.5
+    sliderInner.width(sliderItems.outerHeight()*5);
+    sliderInner.height(sliderItems.outerHeight()*5);
+
+    var sliderInnerWidth = sliderInner.outerWidth();
+    var sliderInnerOffset = sliderInner.offset();
+
+    sliderOrigin.css('margin-top',(sliderInner.height() / 2) - (sliderOrigin.height() / 2));
+    
+    // calc rotation positioning
+    function rotationPosition(exceptIndex){
+        exceptIndex = exceptIndex | 0;
+        var i = 1;
+        sliderItems.each(function(e){
+            var $this = $(this);
+            extraDeg = exceptIndex > itemsLength/2? 360: 0;
+            if(e === exceptIndex){
+                $this.addClass('active').css('transform', 'rotate('+extraDeg+'deg)');
+            }else{
+                $this.css('transform', 'rotate('+((i*calcDeg)+45)+'deg)');
+                i++;
+            }
+        });
+    }rotationPosition();
+
+
+    // click event on item
+    var clickedItemIndex = null;
+    function sliderItemsClickEvent(){
+
+        sliderItems.mousedown(function(e){
+            if(clickedItemIndex == null && e.which == 1){
+                clickedItemIndex = $(this).index();
+            }
+        });
+        sliderItems.mouseup(function(){
+            var $this = $(this);
+            if(clickedItemIndex === $this.index()){
+                currentItem = $this;
+                pushIndex($this.index());
+            }
+        });
+    }sliderItemsClickEvent();
+
+    // push index of the activated item
+    function pushIndex(index){
+        sliderItems.removeClass('active');
+        rotationPosition(index);
+    }
+
+    // clickDown = true if mousedown on slider
+    sliderInner.mousedown(function(e){
+        clickDown = true;
+        moveFrom = e.pageX;
+    });
+
+
+    // clickDown = false if mouseup on any place in the page
+    $(document).mouseup(function(e){
+        clickDown = false;
+        setTimeout(function(){ clickedItemIndex = null; }, 505);
+        // setTimeout(function(){clickDown = false;}, 505);
+        if(mouseMove){
+            mouseMove = false;
+            moveto = e.pageX;
+            swipe(moveFrom, moveto);
+        }
+    });
+
+
+    // calc mouse move on sliderInner div
+    sliderInner.mousemove(function(e){
+        if(clickDown){
+            if(!mouseMove){mouseMove = true;}
+            var offsetX = e.pageX - sliderInnerOffset.left;
+            var move = moveFrom - sliderInnerOffset.left;
+            var motionDeg = ((offsetX - move)/sliderInnerWidth) * (calcDeg*2);
+            extraDeg = currentItem.index() > itemsLength/2? 360:0; 
+            sliderInner.find('.slider-item.active').css('transform', 'rotate('+(motionDeg+extraDeg)+'deg)');
+        }
+    });
+
+    function swipe(from, to){
+        var distance = Math.abs(from - to); // mouse move distance
+        var rightDir = from < to;
+        if(distance > sliderInnerWidth/4){
+            navigate();
+        }else{
+            currentItem.css('transform', 'rotate('+(currentItem.index() > itemsLength/2? 360:0)+'deg)');
+        }
+
+        function navigate(){
+            if(rightDir){
+                var nextIndex = currentItem.next().index();
+                pushIndex(nextIndex != -1? nextIndex:  0);
+            }else{
+                var prevIndex = currentItem.prev().index();
+                pushIndex( prevIndex != -1? prevIndex:  sliderItems.length -1);
+            }
+            currentItem = sliderInner.find('.slider-item.active');
+        }
+
+    }
+});
+</script>
+</html>
