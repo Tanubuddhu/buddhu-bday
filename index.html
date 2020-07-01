@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Happy B'day</title>
     <meta name="author" content="Tanuj Bajaj">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <style>
     html, body{
@@ -104,12 +105,20 @@ img {
 }
 .slider-item.active .slide-subtitle {
    opacity: 1; 
-   font-size: 50px;
+   font-size: 42px;
    transition: all 0.3s ease;  
 }
 .slider-item.active .image-wrapper {
     opacity: 1;     
    transition: all 0.3s ease; 
+}
+.slider-item .caption {
+   opacity: 0;     
+   transition: all 0.3s ease;
+}
+.slider-item.active .caption {
+   opacity: 1;     
+   transition: all 0.3s ease;
 }
 .slider-item .image-wrapper {
     opacity: 0;     
@@ -141,6 +150,13 @@ img {
 .slider-item .image-wrapper .image-3 {
     transform: rotate(15deg);
 }
+.slider-item .caption {
+    max-width: 300px;
+    font-size: 25px;    
+    width: 100%;
+    margin: 0 auto 50px;
+    font-family: 'Dancing Script', cursive;
+}
 
     </style>
 </head>
@@ -150,7 +166,10 @@ img {
 <div class="slider">
     <div class="slider-inner">
         <div class="slider-origin">
-            <div class="slider-item"><span class="slide-title">1<span class="dot">.</span> <span class="slide-subtitle">Just Arrived</span></span>
+            <div class="slider-item"><span class="slide-title">0<span class="dot">.</span> <span class="slide-subtitle">Hola! I'm just born.</span></span>
+                <div class="caption">
+                    <p>Can't speak much. The most I can do is cry, wet everyone's clothes and yes, laugh too. :D </p>
+                </div>
             <div class="image-wrapper">
                 <div class="image-1">
                     <img src="Images/baby.jpg">
@@ -161,10 +180,16 @@ img {
                 </div>
             </div>
             </div>
-            <div class="slider-item"><span class="slide-title">2<span class="dot">.</span> <span class="slide-subtitle"></span></span>
-            
+            <div class="slider-item"><span class="slide-title">1<span class="dot">.</span> <span class="slide-subtitle">I've turned 1! </span></span>
+            <div class="caption">
+                    <p>And hey, I spoke my first word. :) Hmmm...I don't remember it precisely but it was sure one of the most amazing time for my parents. </p>
+                </div>
+
             </div>
-            <div class="slider-item"><span class="slide-title">3<span class="dot">.</span> <span class="slide-subtitle">I've turned 2!</span></span>
+            <div class="slider-item"><span class="slide-title">2<span class="dot">.</span> <span class="slide-subtitle">I've turned 2!</span></span>
+                <div class="caption">
+                    <p>Wooowww! I can walk now. Can't run but sure I'll reach there soon. </p>
+                </div>
                 <div class="image-wrapper">
                 <div class="image-1">
                     
@@ -174,17 +199,10 @@ img {
                 </div>
             </div>
             </div>
-            <div class="slider-item"><span class="slide-title">4<span class="dot">.</span> <span class="slide-subtitle">School Time!</span></span>
-            <div class="image-wrapper">
-                <div class="image-1">
-                    <img src="Images/image1.jpg">
+            <div class="slider-item"><span class="slide-title">3<span class="dot">.</span> <span class="slide-subtitle">My younger sister Dinka came in our home. </span></span>
+                <div class="caption">
+                    <p>Oh, I love her soo much. Her pearl eyes and blush-pink cheeks. I will always be there for her. </p>
                 </div>
-                <div class="image-2"></div>
-                <div class="image-3">
-                    <img src="Images/image4.jpg">
-                </div>
-            </div></div>
-            <div class="slider-item"><span class="slide-title">5<span class="dot">.</span> <span class="slide-subtitle">I'm Growing Faster.</span></span>
             <div class="image-wrapper">
                 <div class="image-1">
                     <img src="Images/image3.jpg">
@@ -193,19 +211,39 @@ img {
                 <div class="image-3">
                     <img src="Images/image5.jpg">
                 </div>
+            </div></div>
+            <div class="slider-item"><span class="slide-title">4<span class="dot">.</span> <span class="slide-subtitle">She is such a doll. </span></span>
+                <div class="caption">
+                    <p>I love playing with her. Growing up with her is so different. </p>
+                </div>
+            <div class="image-wrapper">
+                <div class="image-1">
+                    
+                </div>
+                <div class="image-2"><img src="Images/image7.jpg"></div>
+                <div class="image-3">
+                    
+                </div>
             </div>
             </div>
-            <div class="slider-item"><span class="slide-title">6<span class="dot">.</span> <span class="slide-subtitle"></span></span>
-                
+            <div class="slider-item"><span class="slide-title">5<span class="dot">.</span> <span class="slide-subtitle">Ssshhhh....there are some perks too!</span></span>
+                <div class="caption">
+                    <p>For everything I mess in the house, I have a younger sister to blame!</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1">
+                </div>
+                <div class="image-2"><img src="Images/image5.jpg"></div>
+                <div class="image-3">
+                    
+                </div>
             </div>
-            <div class="slider-item"><span class="slide-title">7
-                <span class="dot">.</span> <span class="slide-subtitle"></span></span>
-                
             </div>
-            <div class="slider-item"><span class="slide-title">8<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">9<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">10<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">11<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+            <div class="slider-item"><span class="slide-title">6
+                <span class="dot">.</span> <span class="slide-subtitle">I'm growing up. </span></span>
+                <div class="caption">
+                    <p> I go to school everyday. Not that am fond of waking up early in the morning but well, you gotta do what you gotta do.</p>
+                </div>
                 <div class="image-wrapper">
                 <div class="image-1">
                     <img src="Images/image6.jpg">
@@ -216,26 +254,180 @@ img {
                 </div>
             </div>
             </div>
-            <div class="slider-item"><span class="slide-title">12<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+            <div class="slider-item"><span class="slide-title">7<span class="dot">.</span> <span class="slide-subtitle">School life is fun...</span></span>
+                <div class="caption">
+                    <p>...without the exams. </p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1">
+                </div>
+                <div class="image-2"><img src="Images/image11.jpg"></div>
+                <div class="image-3">
+                    
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">8<span class="dot">.</span> <span class="slide-subtitle">And even better...</span></span>
+                <div class="caption">
+                    <p>...with more number of summer vacations.</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1">
+                </div>
+                <div class="image-2"><img src="Images/image9.jpg"></div>
+                <div class="image-3">
+                    
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">9<span class="dot">.</span> <span class="slide-subtitle">But I still don't mind going to school everyday.</span></span>
+                <div class="image-wrapper">
+                <div class="image-1">
+                </div>
+                <div class="image-2"><img src="Images/image37.jpg"></div>
+                <div class="image-3">
+                    
+                </div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">10<span class="dot">.</span> <span class="slide-subtitle">I love my mom.</span></span>
+                <div class="image-wrapper">
+                <div class="image-1">
+                    <img src="Images/image12.jpg">
+                </div>
+                <div class="image-2"><img src="Images/image13.jpg"></div>
+                <div class="image-3">
+                    <img src="Images/image14.jpg">
+                </div>
+            </div>
+            <div class="caption">
+                <p></p>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">11<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                
+            <div class="caption">
+                <p></p>
+            </div>
+            <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image15.jpg"></div>
+                <div class="image-2"><img src="Images/image16.jpg"></div>
+                <div class="image-3"><img src="Images/image17.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">12<span class="dot">.</span> <span class="slide-subtitle">I love my father.</span></span>
+            </div>
+            <div class="slider-item"><span class="slide-title">13<span class="dot">.</span> <span class="slide-subtitle"></span></span>
+                <div class="caption">
+                    <p></p>
+                </div>
                 <div class="image-wrapper">
                 <div class="image-1"></div>
-                <div class="image-2"><img src="Images/image11.jpg"></div>
+                <div class="image-2"><img src="Images/image4.jpg"></div>
                 <div class="image-3"></div>
             </div>
             </div>
-            <div class="slider-item"><span class="slide-title">13<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">14<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">15<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">16<span class="dot">.</span> <span class="slide-subtitle">Oh Damm! Board Exam...</span></span></div>
-            <div class="slider-item"><span class="slide-title">17<span class="dot">.</span> <span class="slide-subtitle">What Should I Choose!</span></span></div>
-            <div class="slider-item"><span class="slide-title">18<span class="dot">.</span> <span class="slide-subtitle">Hurrraaaaayyy! School's over.</span></span></div>
-            <div class="slider-item"><span class="slide-title">19<span class="dot">.</span> <span class="slide-subtitle">College Time!</span></span></div>
-            <div class="slider-item"><span class="slide-title">20<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">21<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">22<span class="dot">.</span> <span class="slide-subtitle">Big City!</span></span></div>
-            <div class="slider-item"><span class="slide-title">23<span class="dot">.</span> <span class="slide-subtitle">My First Job!</span></span></div>
-            <div class="slider-item"><span class="slide-title">24<span class="dot">.</span> <span class="slide-subtitle"></span></span></div>
-            <div class="slider-item"><span class="slide-title">25<span class="dot">.</span> <span class="slide-subtitle">The Lockdown</span></span></div>
+            <div class="slider-item"><span class="slide-title">14<span class="dot">.</span> <span class="slide-subtitle">The one thing I have always liked living here in my city...</span></span>
+                <div class="caption">
+                    <p>...is attending the celebration of Ganesh Chaturthi.</p>
+                </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">15<span class="dot">.</span> <span class="slide-subtitle">Oh damn! Board exams time.</span></span>
+                <div class="caption">
+                    <p>Oh God, I hate S.St. no no Maths no no Science no no actually all of subjects, I am so glad it's over. </p>
+                </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">16<span class="dot">.</span> <span class="slide-subtitle">And now, I have to make a decision.</span></span>
+                <div class="caption">
+                    <p>I think I'll do good in Science! </p>
+                </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">17<span class="dot">.</span> <span class="slide-subtitle">Hurrraaaaayyy! School's over.</span></span>
+                <div class="caption">
+                    <p>Yippieeee! No more exams, no more homeworks, no more assignments! </p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image38.jpg"></div>
+                <div class="image-2"><img src="Images/image39.jpg"></div>
+                <div class="image-3"><img src="Images/image40.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">18<span class="dot">.</span> <span class="slide-subtitle">College Time! </span></span>
+                <div class="caption">
+                    <p>I got admission into Vaish College of Engineering Rohtak. College seems more like the school: the assignments, the tests, the exams. but there are some college advantages also</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image18.jpg"></div>
+                <div class="image-2"></div>
+                <div class="image-3"><img src="Images/image24.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">19<span class="dot">.</span> <span class="slide-subtitle">Homesick</span></span>
+                <div class="caption">
+                    <p>I get really homesick at times, feel the need to go back to my family and be at home.</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"></div>
+                <div class="image-2"><img src="Images/image41.jpg"></div>
+                <div class="image-3"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">20<span class="dot">.</span> <span class="slide-subtitle">Friends and survival </span></span>
+                <div class="caption">
+                    <p>I found it hard initially. But my best friend Gamma was always there for me throughout and made me feel like am home. </p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image42.jpg"></div>
+                <div class="image-2"><img src="Images/image43.jpg"></div>
+                <div class="image-3"><img src="Images/image44.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">21<span class="dot">.</span> <span class="slide-subtitle">"
+The final year"</span></span>
+                <div class="caption">
+                    <p>So many mixed feelings: tension of placement, sadness of leaving my friends and happiness of going back home. </p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"></div>
+                <div class="image-2"><img src="Images/image45.jpg"></div>
+                <div class="image-3"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">22<span class="dot">.</span> <span class="slide-subtitle">I've come to this big city, Delhi. </span></span>
+                <div class="caption">
+                    <p>I am scared a bit. But am glad I have my second mother to protect and love besides me.</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image46.jpg"></div>
+                <div class="image-2"><img src="Images/image47.jpg"></div>
+                <div class="image-3"><img src="Images/image48.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">23<span class="dot">.</span> <span class="slide-subtitle">Yayyyyy! I got my first job.  </span></span>
+                <div class="caption">
+                    <p>I started working at "The Webplant".</p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image49.jpg"></div>
+                <div class="image-2"></div>
+                <div class="image-3"><img src="Images/image50.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">24<span class="dot">.</span> <span class="slide-subtitle">I am a strong, independent woman. </span></span>
+                <div class="caption">
+                    <p>I am happy. There''s  nothing more I could ask for. </p>
+                </div>
+                <div class="image-wrapper">
+                <div class="image-1"><img src="Images/image51.jpg"></div>
+                <div class="image-2"><img src="Images/image53.jpg"></div>
+                <div class="image-3"><img src="Images/image52.jpg"></div>
+            </div>
+            </div>
+            <div class="slider-item"><span class="slide-title">25<span class="dot">.</span> <span class="slide-subtitle">The lockdown year and the quarantinne birthday. </span></span>
+                <div class="caption">
+                    <p>I have  never ever stayed away from my family for soo long.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
